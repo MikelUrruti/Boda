@@ -28,7 +28,7 @@ class User extends Authenticatable
 
     public function alergias()
     {
-        return $this->belongsToMany(User::class, "alergiasUsuarios", "idUsuario", "idAlergia")->withTimestamps();
+        return $this->belongsToMany(User::class, "alergiasusuarios", "idUsuario", "idAlergia")->withTimestamps();
     }
 
     public function parejaInvitado()
