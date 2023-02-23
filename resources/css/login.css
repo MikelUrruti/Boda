@@ -1,0 +1,27 @@
+#botonAcceder {
+
+    font-size: 24px;
+
+}
+
+@media (max-width: 360px) {
+    
+    #botonAcceder {
+
+        font-size: 17px;
+    
+    }
+
+    .formulario {
+
+        font-size: 15px;
+
+    }
+
+    #tituloFormulario {
+
+        font-size: 25px;
+
+    }
+
+}

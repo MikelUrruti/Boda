@@ -1,0 +1,165 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Cinzel;
+    src: url(fonts/Cinzel/Cinzel-Regular.otf);
+}
+
+.cajaContainer {
+
+    background-color: rgba(226, 214, 214, 0.7);
+    border-radius: 20px;
+    font-family: Cinzel;
+    font-size: 20px;
+    
+}
+
+.botonBlanco {
+
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    color: black;
+    font-family: Cinzel;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+
+.botonRojo {
+
+    background-color: rgba(237, 18, 18, 0.7);
+    border-radius: 20px;
+    transition: 700ms;
+    color: black;
+    font-family: Cinzel;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+
+.botonRojoSinRadious {
+
+    background-color: rgba(237, 18, 18, 0.7);
+    transition: 700ms;
+    color: black;
+    font-family: Cinzel;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+
+.botonAzulOscuro {
+
+    background-color: rgba(0, 62, 222, 0.7);
+    transition: 700ms;
+    color: white;
+    font-family: Cinzel;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+
+.botonAzulTurquesa {
+
+    background-color: rgba(0, 240, 255, 0.7);
+    transition: 700ms;
+    color: black;
+    font-family: Cinzel;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+
+.botonAzulTurquesaRadius {
+
+    background-color: rgba(0, 240, 255, 0.7);
+    border-radius: 20px;
+    transition: 700ms;
+    color: black;
+    font-family: Cinzel;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+
+.botonVerdeClaro {
+
+    background-color: rgba(0, 255, 0, 0.7);
+    transition: 700ms;
+    color: black;
+    font-family: Cinzel;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+
+.botonVerdeClaroRadius {
+
+    background-color: rgba(0, 255, 0, 0.7);
+    border-radius: 20px;
+    transition: 700ms;
+    color: black;
+    font-family: Cinzel;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+
+.textoVerde {
+
+    color: rgb(16, 181, 71);
+    
+}
+
+.iconoCheck {
+
+    /* color: rgba(0, 255, 0, 1); */
+
+}
+
+.botonAzulOscuro:hover {
+
+    background-color: rgba(0, 62, 222, 1);
+
+}
+
+.botonAzulTurquesa:hover {
+
+    background-color: rgba(0, 240, 255, 1);
+
+}
+
+.botonAzulTurquesaRadius:hover {
+
+    background-color: rgba(0, 240, 255, 1);
+
+}
+
+.botonRojo:hover {
+
+    background-color: rgba(251, 6, 6, 1);
+
+}
+
+.botonBlanco:hover {
+
+    background-color: rgba(255, 255, 255, 1);
+
+}
+
+.botonVerdeClaro:hover {
+
+    background-color: rgba(0, 255, 0, 1);
+
+}
+
+.botonVerdeClaroRadius:hover {
+
+    background-color: rgba(0, 255, 0, 1);
+
+
+}

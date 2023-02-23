@@ -1,0 +1,39 @@
+body {
+
+    background: url('imagenes/fondoFormulario.jpg') no-repeat center center fixed;
+    /* background: url('imagenes/fondoMenuPrincipal1.jpg') no-repeat center center fixed; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+#tituloFormulario {
+
+    background-color: #498A32;
+    color: white;
+    font-family: Cinzel;
+    font-weight: bold;
+    font-size: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.formulario {
+
+    background-color: #E2D6D6;
+    border-radius: 20px;
+    font-family: Cinzel;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.cajaTexto {
+
+    border-radius: 20px;
+    border: none;
+
+}

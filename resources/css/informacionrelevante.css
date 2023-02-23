@@ -1,0 +1,123 @@
+
+.imagen {
+    max-width: 597px; 
+    max-height: 522px;
+}
+
+.tituloCaja {
+
+    background-color: #5fcf92;
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+div {
+
+    font-size: 20px;
+
+} 
+
+.textoTituloCaja {
+
+    font-size: 30px;
+
+}
+
+.destacarTexto {
+
+    font-size: 25px;
+
+}
+
+
+@media (max-width: 470px) {
+
+    .botonBlanco {
+
+        font-size: 17px;
+
+    }
+
+}
+
+@media (min-width: 471px) and (max-width: 530px) {
+
+
+    .botonBlanco {
+
+        font-size: 16px;
+
+    }
+
+
+}
+
+@media (min-width: 531px) and (max-width: 600px) {
+
+
+    .botonBlanco {
+
+        font-size: 18px;
+
+    }
+
+
+}
+
+
+@media (min-width: 601px) and (max-width: 750px) {
+
+    .botonBlanco {
+
+        font-size: 19px;
+
+    }
+
+}
+
+@media (min-width: 751px) and (max-width: 900px) {
+
+
+    .botonBlanco {
+
+        font-size: 23px;
+
+    }
+
+}
+
+@media (min-width: 901px) {
+
+    
+    .destacarTexto {
+    
+        font-size: 35px;
+        font-weight: bold;
+    
+    }
+    
+    .botonBlanco {
+    
+        font-size: 25px;
+    
+    }
+
+    .textoTituloCaja {
+
+        font-size: 40px;
+    
+    }
+
+}
+
+/* @media (min-width: 601px) and (max-width: 900px) {
+
+    .botonBlanco {
+
+        font-size: 18px;
+
+    }
+
+} */
