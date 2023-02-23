@@ -1,0 +1,317 @@
+body {
+
+    background-color: black;
+
+}
+
+#imagenFondo {
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: fill;
+    z-index: 0;
+
+}
+
+#containerOpciones .btn{
+
+    font-size: 2vw;
+
+}
+
+#texto {
+
+    color: white;
+    font-size: 50px;
+    font-family: Cinzel;
+
+}
+
+.botonAzulOscuro:hover {
+
+    color: white;
+    
+
+}
+
+.botonAzulTurquesa:hover {
+
+    background-color: rgba(0, 240, 255, 1);
+
+}
+
+.botonRojo:hover {
+
+    background-color: rgba(251, 6, 6, 1);
+
+}
+
+.botonBlanco:hover {
+
+    background-color: rgba(255, 255, 255, 1);
+
+}
+
+@media (max-width: 259px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 10px;
+    
+    }
+
+}
+
+@media (min-width: 260px) and (max-width: 294px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 12px;
+    
+    }
+
+}
+
+@media (min-width: 295px) and (max-width: 311px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 14px;
+    
+    }
+
+}
+
+@media (min-width: 312px) and (max-width: 328px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 15px;
+    
+    }
+
+}
+
+@media (min-width: 329px) and (max-width: 361px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 16px;
+    
+    }
+
+}
+
+@media (min-width: 362px) and (max-width: 395px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 18px;
+    
+    }
+
+}
+
+@media (min-width: 396px) and (max-width: 428px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 20px;
+    
+    }
+
+}
+
+@media (min-width: 429px) and (max-width: 462px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 22px;
+    
+    }
+
+}
+
+@media (min-width: 463px) and (max-width: 495px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 24px;
+    
+    }
+
+}
+
+@media (min-width: 496px) and (max-width: 519px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 26px;
+    
+    }
+
+}
+
+@media (min-width: 520px) and (max-width: 545px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 27px;
+    
+    }
+
+}
+
+@media (min-width: 546px) and (max-width: 579px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 29px;
+    
+    }
+
+}
+
+@media (min-width: 580px) and (max-width: 605px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 31px;
+    
+    }
+
+}
+
+@media (min-width: 606px) and (max-width: 646px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 33px;
+    
+    }
+
+}
+
+@media (min-width: 647px) and (max-width: 696px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 35px;
+    
+    }
+
+}
+
+@media (min-width: 697px) and (max-width: 767px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 37px;
+    
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 33px;
+    
+    }
+
+}
+
+@media (min-width: 851px) and (max-width: 950px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 37px;
+    
+    }
+
+}
+
+@media (min-width: 951px) and (max-width: 991px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 38px;
+    
+    }
+
+}
+
+/* @media (min-width: 992px) and (max-width: 995px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 37.5px;
+    
+    }
+
+}
+
+@media (min-width: 996px) and (max-width: 1043px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 38px;
+    
+    }
+
+} */
+
+/* @media (min-width: 606px) and (max-width: 704px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 33px;
+    
+    }
+
+} */
+
+/* @media (min-width: 580px) and (max-width: 704px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 33px;
+    
+    }
+
+} */
+
+/* @media (max-width: 360px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 20px;
+    
+    }
+
+}
+
+@media (max-width: 360px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 22px;
+    
+    }
+
+} */
+
+/* 
+@media (max-width: 760px) {
+    
+    #containerOpciones .btn {
+
+        font-size: 28px;
+    
+    }
+
+} */
+

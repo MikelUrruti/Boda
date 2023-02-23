@@ -1,0 +1,102 @@
+#misDatosBtn:hover, #datosParejaBtn:hover {
+
+    cursor: pointer;
+
+}
+
+.botonAlergia {
+
+    width: 12%;
+
+}
+
+.cajaOtro {
+
+    width: 35%;
+
+}
+
+.botonBlanco, .botonRojo, .botonAzulTurquesaRadius {
+        
+    font-size: 29px;
+
+}
+
+#tituloFormulario {
+
+    font-size: 36px;
+
+}
+
+@media (max-width: 300px) {
+
+    #tituloFormulario {
+
+        font-size: 20px;
+
+    }
+
+    div {
+
+        font-size: 12px;
+
+    }
+
+    .botonBlanco, .botonRojo, .botonAzulTurquesaRadius {
+        
+        font-size: 15px;
+
+    }
+
+    .datosTab {
+
+        font-size: 13px;
+
+    }
+
+}
+
+/* @media (max-width: 450px) {
+
+    #tituloFormulario {
+
+        font-size: 26px;
+
+    }
+
+    div {
+
+        font-size: 18px;
+
+    }
+
+    .botonBlanco, .botonRojo {
+        
+        font-size: 22px;
+
+    }
+
+} */
+
+@media (min-width: 301px) and (max-width: 576px) {
+    
+
+    #tituloFormulario {
+
+        font-size: 23px;
+
+    }
+
+    div {
+
+        font-size: 15px;
+
+    }
+
+    .botonBlanco, .botonRojo, .botonAzulTurquesaRadius {
+        
+        font-size: 18px;
+
+    }
+
+}

@@ -1,0 +1,48 @@
+@media (max-width: 350px) {
+
+    div {
+
+        font-size: 15px;
+
+    }
+
+    .botonBlanco {
+        
+        font-size: 22px;
+
+    }
+
+    .colContacto {
+
+        font-size: 12px;
+
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    div {
+
+        font-size: 15px;
+
+    }
+
+    .botonBlanco {
+        
+        font-size: 22px;
+
+    }
+
+}
+
+@media (min-width: 351px) and (max-width: 500px) {
+    
+
+    .colContacto {
+
+        font-size: 14px;
+
+    }
+
+}

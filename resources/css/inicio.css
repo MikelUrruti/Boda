@@ -1,0 +1,44 @@
+body {
+
+    background-color: black;
+
+}
+
+#fondoInicio {
+
+    /* background-image: url("imagenes/fondoInicio1.jpeg"); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: fill;
+    z-index: 0;
+
+}
+
+.botonInicio {
+
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: 700ms;
+    color: black;
+    font-family: Cinzel;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+
+.botonInicio:hover {
+
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 42px;
+}
+
+@keyframes agrandarCaja {
+    
+    0% { font-size: 32px; }
+    25% { font-size: 34px; }
+    50% { font-size: 36px; }
+    75% { font-size: 38px; }
+    100% { font-size: 40px; }
+
+}
