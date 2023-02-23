@@ -11,7 +11,7 @@ class Alergia extends Model
 
     public function usuarios()
     {
-        return $this->belongsToMany(User::class, "alergiasUsuarios", "idAlergia", "idUsuario")->withTimestamps();
+        return $this->belongsToMany(User::class, "alergiasusuarios", "idAlergia", "idUsuario")->withTimestamps();
     }
 
 }
