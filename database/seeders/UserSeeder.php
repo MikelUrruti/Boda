@@ -25,17 +25,9 @@ class UserSeeder extends Seeder
         $usuario->correo ='admin@gmail.com';
         $usuario->transporte = 'No';
         $usuario->tipo = 'Admin';
-        $usuario->password = Hash::make('123456Aa');
+        $usuario->password = "$2a$12$8aBuEW6oXU19lwDUnwk7ne3GekB3pa5B8dPglOjqAXgOPC/aE/uc6";
 
         $usuario->save();
-
-        // DB::table('users')->insert([
-        //     'nombre' => "mikel",
-        //     'apellido' => "urrutikoetxea",
-        //     'correo' => 'urruti00@gmail.com',
-        //     'transporte' => 'No',
-        //     'password' => Hash::make('123456Aa'),
-        // ]);
 
     }
 }
