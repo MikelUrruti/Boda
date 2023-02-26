@@ -2,7 +2,7 @@
 
 
 @section("assetsFormulario")
-    @vite(['resources/css/login.css','resources/js/login.js'])
+    @vite(['resources/css/login.css'])
 @endsection
 
 @section('action','/login')

@@ -1,7 +1,7 @@
 @extends('layouts.template')
 
 @section('assets')
-    @vite(['resources/css/informacionrelevante.css','resources/js/informacionrelevante.js',])
+    @vite(['resources/css/informacionrelevante.css'])
 @endsection
 
 @section('title','Información relevante')
