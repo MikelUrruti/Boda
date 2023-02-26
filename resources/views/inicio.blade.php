@@ -2,6 +2,7 @@
 
 @section('assets')
     @vite(['resources/css/inicio.css','resources/js/inicio.js'])
+    
 @endsection
 
 @section('title',__("inicio.titulo"))

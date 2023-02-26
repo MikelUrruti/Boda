@@ -2,7 +2,7 @@
 @extends('layouts.template')
 
 @section('assets')
-    @vite(['resources/css/invitacionconfirmada.css','resources/js/invitacionconfirmada.js',])
+    @vite(['resources/css/invitacionconfirmada.css','resources/js/invitacionconfirmada.js'])
 @endsection
 
 @section('title','Invitacion confirmada')

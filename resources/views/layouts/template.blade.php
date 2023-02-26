@@ -16,7 +16,7 @@
 
     <title>@yield('title')</title>
 </head>
-<body class="@yield('bodyClass')">
+<body class="@yield('bodyClass')" style="@yield('bodyStyle')">
     @yield('content')
 </body>
 </html>

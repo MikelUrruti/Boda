@@ -2,7 +2,7 @@
 
 
 @section("assetsFormulario")
-    @vite(['resources/css/anadirAlergia.css','resources/js/anadirAlergia.js'])
+    @vite(['resources/css/anadirAlergia.css'])
 @endsection
 
 @section('action',route("alergias.store"))

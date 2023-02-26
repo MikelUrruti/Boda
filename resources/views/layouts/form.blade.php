@@ -1,13 +1,20 @@
 @extends('layouts.template')
 
 @section('assets')
-    @vite(['resources/css/formulario.css','resources/js/formulario.js'])
+    @vite(['resources/css/formulario.css'])
     @yield("assetsFormulario")
 @endsection
 
 @section('title')
 @yield('tituloPagina')
 @endsection
+
+@php
+
+$bgImage = asset('imagenes/fondoFormulario.jpg');
+@endphp
+
+@section('bodyStyle','background-image: url("'.$bgImage.'");')
 
 @section('content')
 
@@ -32,11 +39,8 @@
 
     </section>
 
-
-
 </main>
 
 
 
 @endsection
-

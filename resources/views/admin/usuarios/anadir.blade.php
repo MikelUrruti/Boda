@@ -2,7 +2,7 @@
 
 
 @section("assetsFormulario")
-    @vite(['resources/css/anadir.css','resources/js/anadir.js'])
+    @vite(['resources/css/anadir.css'])
 @endsection
 
 @section('action',route("admin.store"))
