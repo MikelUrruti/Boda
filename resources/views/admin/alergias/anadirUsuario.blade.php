@@ -1,9 +1,9 @@
 @extends('layouts.form')
 
 
-@section("assetsFormulario")
+{{-- @section("assetsFormulario")
     @vite(['resources/css/anadirUsuarioAlergia.css'])
-@endsection
+@endsection --}}
 
 @section('action',route("alergias.storeuser"))
 @section('method','POST')

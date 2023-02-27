@@ -90,7 +90,7 @@
                     <tr class="table-secondary">
                         <td class="text-center">
                             {{-- <form action="{{ route("alergias.index") }}" method="get"> --}}
-                                @csrf
+                                {{-- @csrf --}}
 
                                 @if (isset($filtros) && isset($filtros["alergiaSeleccionada"]) && ($alergia->id == $filtros["alergiaSeleccionada"]))
                                     <input type="radio" name="alergiaSeleccionar" class="alergiaSeleccionada" value="{{ $alergia->id }}" checked>
@@ -128,14 +128,18 @@
         
     </div>
 
-    @if (isset(($usuariosAlergicos)))
+    @if (isset($usuariosAlergicos) && count($usuariosAlergicos) > 0)
 
-        <div class="container mt-5">
+        <form class="container mt-5" action="{{ route("alergias.destroyusers") }}" method="post">
                     {{-- <p>{{ $usuariosAlergicos }}</p> --}}
+            @csrf
+
+
+            <input type="hidden" name="alergia" class="" value="{{ $filtros['alergiaSeleccionada'] }}" checked>
 
             <div class="row my-2">
                 <div class="col-4 text-center g-0">
-                    <a href="{{ route("alergias.destroyusers") }}" class="btn botonRojo">{{ __("alergias.eliminarusers") }}</a>
+                    <input type="submit" class="btn botonRojo" value="{{ __("alergias.eliminarusers") }}">
                 </div>
             </div>
 
@@ -175,7 +179,7 @@
                 </div>
             </div>
             
-        </div>
+        </form>
 
     @endif
 

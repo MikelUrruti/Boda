@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\DestroyUserAlergiaRequest;
 use App\Http\Requests\StoreAlergiaRequest;
 use App\Http\Requests\StoreAlergiaUserRequest;
 use App\Models\Alergia;
@@ -159,6 +160,22 @@ class AlergiaController extends Controller
         //
     }
 
+
+    public function destroyUser(DestroyUserAlergiaRequest $request)
+    {
+        $alergia = Alergia::where("id",$request->alergia)->first();
+        $usuarios = $request->usuariosSeleccionados;
+
+        foreach ($usuarios as $usuario) {
+            
+            $alergia->usuarios()->detach($usuario);
+
+        }
+
+        return redirect()->back()->with("mensaje",trans("destroy.exitoUsuarioAlergia",["alergia" => $alergia->nombre]));
+
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -175,4 +192,6 @@ class AlergiaController extends Controller
         return redirect()->back()->with("mensaje",trans("destroy.exitoAlergia",["alergia" => $alergia->nombre]));
 
     }
+
+
 }

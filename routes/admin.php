@@ -25,7 +25,7 @@ Route::resource('alergias', AlergiaController::class)->except([
     'edit', 'show', 'update'
 ]);
 
-Route::delete('alergias/deleteuser', [UserController::class,"destroyUser"])->name("alergias.destroyusers");
+Route::post('alergias/deleteuser', [AlergiaController::class,"destroyUser"])->name("alergias.destroyusers");
 
 Route::get("alergias/anadirusuario",[AlergiaController::class,"createuser"])->name("alergias.anadirusuario");
 
