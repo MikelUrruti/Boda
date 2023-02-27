@@ -30,6 +30,7 @@ return [
     'ultimaActualizacion' => 'Ultima actualización', 
     'contadorPaginador' => 'Mostrando :primeroPagina - :ultimoPagina (Registros totales: :total)',
     'confirmados' => 'Invitados confirmados',
+    'confirmado' => 'Confirmado',
     'alergias' => 'Alérgias/Enfermedades',
     'buscarPalabra' => '',
     'buscar' => 'Buscar',

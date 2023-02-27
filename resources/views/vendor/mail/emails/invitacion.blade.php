@@ -13,6 +13,6 @@
 
 {{ __("emailinvitacion.pd") }}:
 
-{{ __("emailinvitacion.saludo") }},<br>
+{{ __("emailinvitacion.saludo") }}<br>
 {{ __("emailinvitacion.emisores") }}
 </x-mail::message>
