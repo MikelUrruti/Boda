@@ -265,6 +265,7 @@
                         <th class="text-center">{{ __("administracion.pareja") }}</th>
                         <th class="text-center">{{ __("administracion.transporte") }}</th>
                         <th class="text-center">{{ __("administracion.tipo") }}</th>
+                        <th class="text-center">{{ __("administracion.confirmado") }}</th>
                         <th class="text-center">{{  __("administracion.ultimaActualizacion")}}</th>
                     </tr>
                 </thead>
@@ -290,6 +291,7 @@
                             </td>
                             <td class="text-center">{{ $user->transporte }}</td>
                             <td class="text-center">{{ $user->tipo }}</td>
+                            <td class="text-center">{{ $user->confirmado }}</td>
                             <td class="text-center">{{ $user->updated_at }}</td>
                         </tr>
 
