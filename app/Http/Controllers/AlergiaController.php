@@ -172,7 +172,7 @@ class AlergiaController extends Controller
 
         }
 
-        return redirect()->back()->with("mensaje",trans("destroy.exitoUsuarioAlergia",["alergia" => $alergia->nombre]));
+        return redirect()->route("alergias.index")->with("mensaje",trans("destroy.exitoUsuarioAlergia",["alergia" => $alergia->nombre]));
 
     }
 
@@ -189,7 +189,7 @@ class AlergiaController extends Controller
 
         Alergia::destroy($id);
 
-        return redirect()->back()->with("mensaje",trans("destroy.exitoAlergia",["alergia" => $alergia->nombre]));
+        return redirect()->route("alergias.index")->with("mensaje",trans("destroy.exitoAlergia",["alergia" => $alergia->nombre]));
 
     }
 
