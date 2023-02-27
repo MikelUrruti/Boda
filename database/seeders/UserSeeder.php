@@ -20,9 +20,9 @@ class UserSeeder extends Seeder
 
         $usuario = new User();
 
-        $usuario->nombre = "mikel";
-        $usuario->apellido = "urrutikoetxea";
-        $usuario->correo ='admin@gmail.com';
+        $usuario->nombre = "boda";
+        $usuario->apellido = "unaisilvia";
+        $usuario->correo ='bodaunaisilvia@gmail.com';
         $usuario->transporte = 'No';
         $usuario->tipo = 'Admin';
         $usuario->password = "$2a$12$8aBuEW6oXU19lwDUnwk7ne3GekB3pa5B8dPglOjqAXgOPC/aE/uc6";
