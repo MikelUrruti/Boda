@@ -124,7 +124,7 @@ class UserController extends Controller
             
         }
 
-        $users = $user->orderBy('updated_at','DESC')->with("parejaInvitado")->with("parejaInvitadoHijo")->paginate(5);
+        $users = $user->orderBy('updated_at','DESC')->with("parejaInvitado")->with("parejaInvitadoHijo")->paginate(10);
 
         Log::debug($users);
 

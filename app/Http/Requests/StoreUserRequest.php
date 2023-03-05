@@ -24,8 +24,8 @@ class StoreUserRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre' => 'required|alpha',
-            'apellido' => 'required|alpha',
+            'nombre' => 'required|regex:/^[\pL\s\-]+$/u',
+            'apellido' => 'required|regex:/^[\pL\s\-]+$/u',
             'correo' => 'required|email|max:255|regex:/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix|unique:users,correo',
         ];
     }
@@ -39,8 +39,8 @@ class StoreUserRequest extends FormRequest
             'correo.unique' => trans("anadir.error.correo.unique"),
             'nombre.required' => trans("anadir.error.required",["parametro" => "nombre"]),
             'apellido.required' => trans("anadir.error.required",["parametro" => "apellido"]),
-            'nombre.alpha' => trans("anadir.error.nombre.alpha",["parametro" => "nombre"]),
-            'apellido.alpha' => trans("anadir.error.nombre.alpha",["parametro" => "apellido"]),
+            'nombre.regex' => trans("anadir.error.nombre.alpha",["parametro" => "nombre"]),
+            'apellido.regex' => trans("anadir.error.nombre.alpha",["parametro" => "apellido"]),
         ];
     }
 }

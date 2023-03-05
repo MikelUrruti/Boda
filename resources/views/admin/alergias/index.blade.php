@@ -48,6 +48,13 @@
                     </div>
                     <form action="{{ route("alergias.index") }}" method="get" id="filtros">
                         @csrf
+
+                        @if (count($alergias) > 0)
+                            <input type="hidden" name="alergias" id="alergiasPage" value="{{ $alergias->currentPage() }}">
+                        @endif
+
+                        
+                        {{-- <input type="hidden" name="usuarios" id="usuariosPage"> --}}
                         <input type="hidden" name="alergiaSeleccionada" class="alergiaSeleccionada" id="alergiaSeleccionadaInput">
                         <div class="row justify-content-center mt-2">
                             <div class="col-6 g-0 text-center">
@@ -74,7 +81,7 @@
         </div>
     </div>
 
-    <div class="container mt-2">
+    <div class="container mt-2" id="alergias">
         <table class="table table-bordered overflow-hidden">
             <thead>
                 <tr class="table-primary">
@@ -121,7 +128,9 @@
                 @if (count($alergias) == 0)
                     {{ __("administracion.ningunRegistro") }}
                 @else
-                    {{  $alergias->onEachSide(4)->links()  }} {{ trans("administracion.contadorPaginador",["total" => $alergias->total(),"primeroPagina" => $alergias->firstItem(), "ultimoPagina" => $alergias->lastItem()]) }}
+                    {{  $alergias->appends([
+                        "texto" => (isset($filtros) && isset($filtros['texto'])) ? $filtros['texto'] : ""
+                    ])->links()  }} {{ trans("administracion.contadorPaginador",["total" => $alergias->total(),"primeroPagina" => $alergias->firstItem(), "ultimoPagina" => $alergias->lastItem()]) }}
                 @endif
             </div>
         </div>
@@ -130,7 +139,7 @@
 
     @if (isset($usuariosAlergicos) && count($usuariosAlergicos) > 0)
 
-        <form class="container mt-5" action="{{ route("alergias.destroyusers") }}" method="post">
+        <form class="container mt-5" action="{{ route("alergias.destroyusers") }}" method="post" id="usuariosAlergicos">
                     {{-- <p>{{ $usuariosAlergicos }}</p> --}}
             @csrf
 
@@ -174,7 +183,11 @@
                     @if (count($usuariosAlergicos) == 0)
                         {{ __("administracion.ningunRegistro") }}
                     @else
-                        {{  $usuariosAlergicos->onEachSide(4)->links()  }} {{ trans("administracion.contadorPaginador",["total" => $usuariosAlergicos->total(),"primeroPagina" => $usuariosAlergicos->firstItem(), "ultimoPagina" => $usuariosAlergicos->lastItem()]) }}
+                        {{  $usuariosAlergicos->appends([
+                            "texto" => (isset($filtros) && isset($filtros['texto'])) ? $filtros['texto'] : "",
+                            "alergiaSeleccionada" => (isset($filtros) && isset($filtros['alergiaSeleccionada'])) ? $filtros['alergiaSeleccionada'] : "",
+                            "alergias" => (isset($filtros) && isset($filtros['alergias'])) ? $filtros['alergias'] : ""
+                        ])->links()  }} {{ trans("administracion.contadorPaginador",["total" => $usuariosAlergicos->total(),"primeroPagina" => $usuariosAlergicos->firstItem(), "ultimoPagina" => $usuariosAlergicos->lastItem()]) }}
                     @endif
                 </div>
             </div>

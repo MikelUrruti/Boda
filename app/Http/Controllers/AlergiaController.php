@@ -32,7 +32,7 @@ class AlergiaController extends Controller
 
             $usuariosAlergicos = $alergia->find($request->alergiaSeleccionada)->usuarios();
 
-            $usuariosAlergicos = $usuariosAlergicos->paginate(10);
+            $usuariosAlergicos = $usuariosAlergicos->paginate(10,["*"],"usuarios");
             
             $alergia = Alergia::query();
 
@@ -46,8 +46,16 @@ class AlergiaController extends Controller
 
         }
 
+        if ($request->has("alergias") && $request->get("alergias")) {
+            $filtros["alergias"] = $request->get("alergias");
+        }
 
-        $alergias = $alergia->orderBy('updated_at','DESC')->paginate(5);
+        if ($request->has("usuarios") && $request->get("usuarios")) {
+            $filtros["usuarios"] = $request->get("usuarios");
+        }
+
+
+        $alergias = $alergia->orderBy('updated_at','DESC')->paginate(5,["*"],"alergias");
 
         // Log::debug($alergias);
 
