@@ -46,8 +46,9 @@
                     <div class="row">
                         <legend class="text-center text-white py-2 bg-dark cajaTituloFiltro">{{ __("administracion.filtros") }}</legend>
                     </div>
-                    <form action="{{ route("admin.index") }}" method="get">
+                    <form action="{{ route("admin.index") }}" method="get" id="filtros">
                         @csrf
+                        {{-- <input type="hidden" name="page" id="page"> --}}
                         <div class="row justify-content-center mt-2">
                             <div class="col-6 g-0 text-center">
                                 <input type="text" name="texto" id="" class="cajaTexto w-100 py-2 text-center" value="{{ (isset($filtros) && isset($filtros['texto'])) ? $filtros['texto'] : "" }}" placeholder="{{ __("administracion.buscarTexto") }}">
@@ -184,8 +185,8 @@
                                         @endif
 
                                     @else
-                                        <option value="Todos">{{ __("administracion.todos") }}</option>
-                                        <option value="Usuario" selected>{{ __("administracion.tipoUsuarios.usuario") }}</option>    
+                                        <option value="Todos" selected>{{ __("administracion.todos") }}</option>
+                                        <option value="Usuario">{{ __("administracion.tipoUsuarios.usuario") }}</option>    
                                         <option value="Admin">{{ __("administracion.tipoUsuarios.admin") }}</option>
                                     @endif
 
@@ -303,7 +304,14 @@
                     @if (count($users) == 0)
                         {{ __("administracion.ningunRegistro") }}
                     @else
-                        {{  $users->onEachSide(4)->links()  }} {{ trans("administracion.contadorPaginador",["total" => $users->total(),"primeroPagina" => $users->firstItem(), "ultimoPagina" => $users->lastItem()]) }}
+                        {{  $users->appends([
+                            "texto" => (isset($filtros) && isset($filtros['texto'])) ? $filtros['texto'] : "",
+                            "confirmados" => (isset($filtros) && isset($filtros['confirmados'])) ? $filtros['confirmados'] : "",
+                            "transporte" => (isset($filtros) && isset($filtros['transporte'])) ? $filtros['transporte'] : "",
+                            "tipo" => (isset($filtros) && isset($filtros['tipo'])) ? $filtros['tipo'] : "",
+                            "pareja" => (isset($filtros) && isset($filtros['pareja'])) ? $filtros['pareja'] : ""
+                            // "confirmados" => (isset($filtros) && isset($filtros['confirmados'])) ? $filtros['confirmados'] : "",
+                            ])->links()  }} {{ trans("administracion.contadorPaginador",["total" => $users->total(),"primeroPagina" => $users->firstItem(), "ultimoPagina" => $users->lastItem()]) }}
                     @endif
                 </div>
             </div>

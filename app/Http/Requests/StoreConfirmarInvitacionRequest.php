@@ -31,8 +31,8 @@ class StoreConfirmarInvitacionRequest extends FormRequest
             Rule::in(['Si', 'No'])
         ];
 
-        $nombre = 'required|string|alpha';
-        $apellido = 'required|string|alpha';
+        $nombre = 'required|string|regex:/^[\pL\s\-]+$/u';
+        $apellido = 'required|string|regex:/^[\pL\s\-]+$/u';
 
         $transporte = [
             'required',
@@ -58,12 +58,12 @@ class StoreConfirmarInvitacionRequest extends FormRequest
             $nombrePareja = [
                 'required',
                 'string',
-                'alpha'
+                'regex:/^[\pL\s\-]+$/u'
             ];
             $apellidoPareja = [
                 'required',
                 'string',
-                'alpha'
+                'regex:/^[\pL\s\-]+$/u'
             ];
             $correoPareja = [
                 'required',
@@ -102,11 +102,11 @@ class StoreConfirmarInvitacionRequest extends FormRequest
     {
         return [
             'nombre.required' => trans("confirmarinvitacion.error.nombre.required", ["nombre" => "nombre"]),
-            'nombre.alpha' => trans("confirmarinvitacion.error.nombre.alpha", ["nombre" => "nombre"]),
+            'nombre.regex' => trans("confirmarinvitacion.error.nombre.alpha", ["nombre" => "nombre"]),
             'nombre.string' => trans("confirmarinvitacion.error.nombre.alpha", ["nombre" => "nombre"]),
             
             'apellido.required' => trans("confirmarinvitacion.error.nombre.required", ["nombre" => "apellido"]),
-            'apellido.alpha' => trans("confirmarinvitacion.error.nombre.alpha",["nombre" => "apellido"]),
+            'apellido.regex' => trans("confirmarinvitacion.error.nombre.alpha",["nombre" => "apellido"]),
             'apellido.string' => trans("confirmarinvitacion.error.nombre.alpha", ["nombre" => "apellido"]),
             
             'confirmado.required' => trans("confirmarinvitacion.error.confirmado.required"),
@@ -130,11 +130,11 @@ class StoreConfirmarInvitacionRequest extends FormRequest
             'pareja.required' => trans("confirmarinvitacion.error.pareja.required"),
 
             'nombrePareja.required' => trans("confirmarinvitacion.error.nombrePareja.required", ["nombre" => "nombre"]),
-            'nombrePareja.alpha' => trans("confirmarinvitacion.error.nombrePareja.alpha", ["nombre" => "nombre"]),
+            'nombrePareja.regex' => trans("confirmarinvitacion.error.nombrePareja.alpha", ["nombre" => "nombre"]),
             'nombrePareja.string' => trans("confirmarinvitacion.error.nombrePareja.alpha", ["nombre" => "nombre"]),
 
             'apellidoPareja.required' => trans("confirmarinvitacion.error.nombrePareja.required", ["nombre" => "apellido"]),
-            'apellidoPareja.alpha' => trans("confirmarinvitacion.error.nombrePareja.alpha",["nombre" => "apellido"]),
+            'apellidoPareja.regex' => trans("confirmarinvitacion.error.nombrePareja.alpha",["nombre" => "apellido"]),
             'apellidoPareja.string' => trans("confirmarinvitacion.error.nombrePareja.alpha", ["nombre" => "apellido"]),
 
             'correoPareja.required' => trans("confirmarinvitacion.error.correoPareja.required"),

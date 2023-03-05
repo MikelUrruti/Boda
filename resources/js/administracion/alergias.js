@@ -8,14 +8,14 @@ $(function() {
 
         // $(event.target).parent().trigger("submit");
 
+        // var input = $("<input>")
+        //        .attr("type", "hidden")
+        //        .attr("name", "alergias").val();
+        // $('#filtros').append(input);
+
         $("#filtros").trigger("submit");
 
-        // var url = window.location.href;    
-        
-        // url += "?alergiaSeleccionada = " + $(this).attr("value");
-
-        // window.location.href = url;
-
     });
+    
 
 });
